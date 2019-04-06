@@ -23,7 +23,7 @@
 	branch = auto
 [core]
     editor = /usr/bin/vim
-    excludesfile = ~/.gitignore
+    excludesfile = ~/.gitexcludes
 	mergeoptions = --no-edit
 [push]
 	default = current
