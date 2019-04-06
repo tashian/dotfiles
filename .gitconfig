@@ -1,0 +1,31 @@
+[alias]
+    c = commit -m
+    st = status -s
+    br = branch
+    new = checkout -b
+    del = branch -d
+    co = checkout
+    dc = diff --cached
+    fap = fetch --all --prune
+    rh = reset --hard
+[merge]
+    tool = vimdiff
+[mergetool]
+    prompt = true
+[mergetool "vimdiff"]
+    cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[user]
+	name = tashian
+	email = carl@tashian.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore
+	mergeoptions = --no-edit
+[push]
+	default = current
+[github]
+	user = tashian
