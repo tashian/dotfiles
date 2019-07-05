@@ -19,6 +19,10 @@ let g:airline_powerline_fonts = 1
 " supported files
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
+" Markdown support
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -76,6 +80,8 @@ set smartcase                   " ... unless they contain at least one capital l
 "" Dealing with unsaved buffers
 set hidden                      " Allow unsaved buffers
 set confirm                     " Confirm all unsaved buffers on exit
+
+set foldlevel=99
 
 " ---- KEY BINDINGS ------------------------------------------------------------
 " Set <leader> key to ,
