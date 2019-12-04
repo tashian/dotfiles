@@ -13,7 +13,8 @@ alias tar='env COPYFILE_DISABLE=true tar'
 
 # python 3.7
 # see https://docs.python.org/3/tutorial/venv.html
-source ~/.pyenv/py37/bin/activate.fish
+. ~/.pyenv/py37/bin/activate.fish
+#. /Users/carl/code/virtualenv/.tox/embed/bin/activate.fish
 
 set -U EDITOR vim
 alias vi='vim'

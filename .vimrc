@@ -31,7 +31,14 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|dist\|node_modules\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_max_files=32768
+if executable('rg')
+    set grepprg=rg\ --color=never
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_use_caching = 0
+endif
+
 
 Plug 'airblade/vim-gitgutter'
 
@@ -83,6 +90,8 @@ set confirm                     " Confirm all unsaved buffers on exit
 
 set foldlevel=99
 
+set wildignore+=*/.git/*,*/tmp/*,*.swp
+
 " ---- KEY BINDINGS ------------------------------------------------------------
 " Set <leader> key to ,
 let mapleader = ","
@@ -114,4 +123,8 @@ nmap <silent> <leader>m :bprev<CR>             " Previous buffer
 au FileType py set autoindent
 au FileType py set smartindent
 au FileType py set textwidth=79 " PEP-8 Friendly
+
+" Turn on spellcheck for certain files
+" see: https://thoughtbot.com/blog/vim-spell-checking
+autocmd BufRead,BufNewFile *.md setlocal spell
 
