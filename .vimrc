@@ -7,6 +7,12 @@ filetype off     " required for vim-plug!
 " use :PlugUpgrade to upgrade vim-plug
 " see https://github.com/junegunn/vim-plug for more
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'mileszs/ack.vim'
