@@ -14,9 +14,6 @@
     prompt = true
 [mergetool "vimdiff"]
     cmd = nvim -d $BASE $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
-[user]
-	name = tashian
-	email = carl@tashian.com
 [color]
 	diff = auto
 	status = auto
@@ -29,3 +26,8 @@
 	default = current
 [github]
 	user = tashian
+[credential]
+	helper = osxkeychain
+[user]
+	name = Carl Tashian
+	email = carl@smallstep.com

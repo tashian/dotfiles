@@ -54,9 +54,9 @@ filetype plugin indent on
 
 " ---- COLORS ------------------------------------------------------------------
 " Highlight everything after column 80
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-highlight LineNr ctermfg=grey
+" let &colorcolumn=join(range(81,999),",")
+" highlight ColorColumn ctermbg=235 guibg=#2c2d27
+" highlight LineNr ctermfg=grey
 
 "" Show Invisibles
 " Use the same symbols as TextMate for tabstops and EOLs
@@ -80,7 +80,6 @@ set nu
 
 "" Whitespace
 set tabstop=4 shiftwidth=4      " a tab is 4 spaces (Python)
-set expandtab                   " use spaces, not tabs (optional)
 set smarttab                    " fix <BS> key
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
