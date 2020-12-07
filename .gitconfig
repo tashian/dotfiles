@@ -31,3 +31,5 @@
 [user]
 	name = Carl Tashian
 	email = carl@smallstep.com
+[pull]
+	rebase = false

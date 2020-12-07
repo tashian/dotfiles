@@ -37,7 +37,7 @@ PS1="$SI\w$NM"'$(__git_ps1 " %s")'"$ $IN"
 
 # python 3.7
 # see https://docs.python.org/3/tutorial/venv.html
-source ~/.pyenv/py37/bin/activate
+source ~/.pyenv/3.8.5/bin/activate
 
 #I hate noise
 set bell-style visible
