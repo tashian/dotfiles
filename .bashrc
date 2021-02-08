@@ -19,12 +19,13 @@ print_code() {
 
 alias grep='GREP_COLOR="1;33" LANG=C grep --color=auto' #use GREP_COLOR=7 to highlight whitespace
 
-
 # Dotfiles, stored via https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Prevent resource forks from being tarred
 alias tar='COPYFILE_DISABLE=true tar' 
+
+source ~/.git-prompt.sh
 
 # bright prompt with $HOST:$PWD
 # Terminal colours (after installing GNU coreutils)
@@ -37,7 +38,7 @@ PS1="$SI\w$NM"'$(__git_ps1 " %s")'"$ $IN"
 
 # python 3.7
 # see https://docs.python.org/3/tutorial/venv.html
-source ~/.pyenv/3.8.5/bin/activate
+# source ~/.pyenv/3.8.5/bin/activate
 
 #I hate noise
 set bell-style visible
@@ -59,22 +60,4 @@ fi
 # direnv
 if type direnv >/dev/null 2>/dev/null; then
     eval "$(direnv hook bash)"
-fi
-
-# This adds git tab completion and other stuff...
-if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
-    for f in $(brew --prefix)/etc/bash_completion.d/*; do
-        source $f
-    done
-fi
-# 
-# Google Cloud
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f $HOME/bin/google-cloud-sdk/path.bash.inc ]; then
-  source "$HOME/bin/google-cloud-sdk/path.bash.inc"
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f $HOME/bin/google-cloud-sdk/completion.bash.inc ]; then
-  source "$HOME/bin/google-cloud-sdk/completion.bash.inc"
 fi

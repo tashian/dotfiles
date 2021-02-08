@@ -1,5 +1,3 @@
-# homebrew
-set -g fish_user_paths "/usr/local/bin" $fish_user_paths
 set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 
 alias grep='grep --color=auto'
@@ -16,7 +14,7 @@ alias tar='env COPYFILE_DISABLE=true tar'
 
 # python 3.8.5
 # see https://docs.python.org/3/tutorial/venv.html
-# . ~/.pyenv/3.9.0/bin/activate.fish
+. ~/.pyenv/3.9.0/bin/activate.fish
 #. $HOME/virtualenv/.tox/embed/bin/activate.fish
 
 set -U EDITOR vim
@@ -28,4 +26,4 @@ alias ls='gls --color=auto -F'
 set -g fish_user_paths $HOME"/bin" $fish_user_paths
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
+if [ -f $HOME'/Applications/google-cloud-sdk/path.fish.inc' ]; . $HOME'/Applications/google-cloud-sdk/path.fish.inc'; end
