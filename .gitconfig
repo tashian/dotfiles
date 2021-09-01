@@ -26,8 +26,8 @@
 	default = current
 [github]
 	user = tashian
-[credential]
-	helper = osxkeychain
+[init]
+	defaultBranch = main
 [user]
 	name = Carl Tashian
 	email = carl@smallstep.com
