@@ -11,5 +11,4 @@ export EDITOR="vi"
 export PATH="$PATH:./node_modules/.bin"
 
 # homebrew
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/bin:$PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
