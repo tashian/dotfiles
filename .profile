@@ -11,4 +11,6 @@ export EDITOR="vi"
 export PATH="$PATH:./node_modules/.bin"
 
 # homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
