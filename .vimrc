@@ -21,10 +21,6 @@ Plug 'mileszs/ack.vim'
 Plug 'vim-airline/vim-airline'
 let g:airline_powerline_fonts = 1
 
-" post install (yarn install | npm install) then load plugin only for editing
-" supported files
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-
 " Markdown support
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
