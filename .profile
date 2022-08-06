@@ -6,6 +6,7 @@
 
 export LESS="-R#3m~gQ"
 export EDITOR="vi"
+HISTCONTROL=ignorespace
 
 # npm
 export PATH="$PATH:./node_modules/.bin"
@@ -14,3 +15,5 @@ export PATH="$PATH:./node_modules/.bin"
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+. "$HOME/.cargo/env"
+
