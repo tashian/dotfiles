@@ -25,7 +25,7 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # Prevent resource forks from being tarred
 alias tar='COPYFILE_DISABLE=true tar' 
 
-source ~/.git-prompt.sh
+# source ~/.git-prompt.sh
 
 # bright prompt with $HOST:$PWD
 # Terminal colours (after installing GNU coreutils)
@@ -34,7 +34,7 @@ HI="\[\033[0;37m\]" #change this for letter colors
 HII="\[\033[0;31m\]" #change this for letter colors
 SI="\[\033[0;33m\]" #this is for the current directory
 IN="\[\033[0m\]"
-PS1="$SI\w$NM"'$(__git_ps1 " %s")'"$ $IN"
+#PS1="$SI\w$NM"'$(__git_ps1 " %s")'"$ $IN"
 
 # python 3.7
 # see https://docs.python.org/3/tutorial/venv.html
