@@ -76,7 +76,7 @@ set nu
 
 "" Whitespace
 set tabstop=4 shiftwidth=4      " a tab is 4 spaces (Python)
-set smarttab                    " fix <BS> key
+set expandtab                   " a tab is always spaces
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -121,9 +121,10 @@ nmap <silent> <leader>. :bnext<CR>             " Next buffer
 nmap <silent> <leader>m :bprev<CR>             " Previous buffer
 
 " ---- FILETYPES ---------------------------------------------------------------
-au FileType py set autoindent
-au FileType py set smartindent
-au FileType py set textwidth=79 " PEP-8 Friendly
+au FileType py setlocal autoindent
+au FileType py setlocal smartindent
+au FileType py setlocal textwidth=79 " PEP-8 Friendly
+au FileType go setlocal noexpandtab
 
 " Turn on spellcheck for certain files
 " see: https://thoughtbot.com/blog/vim-spell-checking
