@@ -14,3 +14,4 @@ export PATH="$PATH:./node_modules/.bin"
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+. "$HOME/.cargo/env"

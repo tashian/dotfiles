@@ -10,4 +10,4 @@ end
 if [ -f '/Users/carl/google-cloud-sdk/path.fish.inc' ]; . '/Users/carl/google-cloud-sdk/path.fish.inc'; end
 
 # Paths will not be added if they don't exist.
-fish_add_path --global --prepend $HOME"/bin" $HOME"/.cargo/bin" "/opt/homebrew/bin" "/opt/homebrew/sbin"
+fish_add_path --global --prepend $HOME"/bin" $HOME"/.cargo/bin" "/opt/homebrew/bin" "/opt/homebrew/sbin" $HOME"/.local/bin"
