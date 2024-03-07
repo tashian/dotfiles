@@ -27,7 +27,7 @@ log stream --predicate 'subsystem == "com.apple.UVCExtension" and composedMessag
 
     if i_am_at_home; then 
 		#Light 1 - set to on
-		curl --location --request PUT "http://${LIGHT_ADDR}:9123/elgato/lights" --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":280,"on":1}],"numberOfLights":1}'
+		curl --location --request PUT "http://${LIGHT_ADDR}:9123/elgato/lights" --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":10,"temperature":280,"on":1}],"numberOfLights":1}'
 	fi
 
   fi
@@ -37,7 +37,7 @@ log stream --predicate 'subsystem == "com.apple.UVCExtension" and composedMessag
 	
     if i_am_at_home; then	  
 		#Light 1 - set to off
-		curl --location --request PUT "http://${LIGHT_ADDR}:9123/elgato/lights" --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":40,"temperature":280,"on":0}],"numberOfLights":2}'
+		curl --location --request PUT "http://${LIGHT_ADDR}:9123/elgato/lights" --header 'Content-Type: application/json' --data-raw '{"lights":[{"brightness":27,"temperature":280,"on":0}],"numberOfLights":2}'
 	fi
 
   fi
