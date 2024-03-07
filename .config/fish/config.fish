@@ -19,3 +19,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+source /Users/carl/.docker/init-fish.sh || true # Added by Docker Desktop
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish || true
