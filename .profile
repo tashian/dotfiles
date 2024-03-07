@@ -17,3 +17,4 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 . "$HOME/.cargo/env"
 
+source /opt/homebrew/opt/asdf/libexec/asdf.sh || true
