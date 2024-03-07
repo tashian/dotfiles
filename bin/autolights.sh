@@ -1,6 +1,9 @@
 #!/bin/bash
 # 
-# To install this on Ventura 13.2
+# This script the Elgato Key Light on and off with any camera
+# attached to the Mac.
+#
+# To install this on macOS:
 # ln -s ~/bin/autolights.sh /usr/local/bin/autolights.sh 
 # ln -s ~/bin/com.tashian.autolights.plist ~/Library/LaunchAgents
 # 
